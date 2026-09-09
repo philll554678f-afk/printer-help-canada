@@ -839,12 +839,7 @@
   </div>
 </section>
 
-<div class="callbar">
-  <a href="tel:+18772616792">
-    <span class="t1">Need Help? Talk to an Expert</span>
-    <span class="t2" style="color:#ff0000">+1 (877) 261-6792</span>
-  </a>
-</div>
+
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -878,7 +873,6 @@
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Service</a></li>
           <li><a href="disclaimer.html">Disclaimer</a></li>
-          <li><a href="tel:18772616792">+1 (877) 261-6792</a></li>
         </ul>
       </div>
     </div>
@@ -888,91 +882,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ═══════════════════════════════════════════════════
-     SUPPORT POPUP — appears 2 sec after page load
-     IMAGE: add a file named "support-agent.jpg" to the
-     same folder as this page (or change the src below)
-═══════════════════════════════════════════════════ -->
-<div class="sp-overlay" id="supportPopup">
-  <div class="sp-box">
-
-    <!-- Close (×) button — light, fades in 1s after popup appears -->
-    <button type="button" class="sp-close" id="supportPopupClose" aria-label="Close">&times;</button>
-
-    <!-- LEFT — Agent photo -->
-    <div class="sp-left">
-      <div class="sp-img-wrap">
-        <!-- ADD YOUR IMAGE: save as support-agent.jpg in same folder -->
-        <img src="support-agent.jpg" alt="Radio Support Specialist" class="sp-agent-img"/>
-      </div>
-      <div class="sp-left-info">
-        <div class="sp-status">
-          <span class="sp-dot"></span>
-          <span>Available Now</span>
-        </div>
-        <p class="sp-name">Printer Specialist</p>
-        <p class="sp-role">Certified Tech Support</p>
-      </div>
-    </div>
-
-    <!-- RIGHT — Content -->
-    <div class="sp-right">
-      <div class="sp-badge">&#128225; Live Expert Support</div>
-      <h2 class="sp-title">Do You Need<br><span>Expert Printer Help?</span></h2>
-      <p class="sp-body">Our printer support specialists are standing by — setup, connectivity, driver issues, and paper jams resolved fast.p>
-
-      <a href="tel:+18772616792" class="sp-call-btn">
-        <span class="sp-call-icon">&#128222;</span>
-        <span class="sp-call-text">
-          <span class="sp-call-label">Call Our Experts</span>
-          <span class="sp-call-num">+1 (877) 261-6792</span>
-        </span>
-      </a>
-
-      <p class="sp-footer-note">
-        <span class="sp-tick">&#10003;</span> 24/7 &nbsp;&nbsp;
-        <span class="sp-tick">&#10003;</span> Free Consultation &nbsp;&nbsp;
-        <span class="sp-tick">&#10003;</span> No Wait Time
-      </p>
-    </div>
-
-  </div>
-</div>
-
-<script>
-  // Show popup after 2 seconds
-  // Also hides a ".callbar" element (if present on the page) so it
-  // doesn't overlap the popup on mobile — safe to leave in even if
-  // your page has no callbar.
-  setTimeout(function () {
-    var popup    = document.getElementById('supportPopup');
-    var closeBtn = document.getElementById('supportPopupClose');
-    var callbar  = document.querySelector('.callbar');
-
-    // Show popup, hide callbar beneath it
-    popup.classList.add('sp-active');
-    if (callbar) callbar.style.display = 'none';
-
-    function closePopup() {
-      popup.classList.remove('sp-active');
-      if (callbar) callbar.style.display = '';
-    }
-
-    // When user taps the call button, callbar reappears
-    var callBtn = popup.querySelector('.sp-call-btn');
-    if (callBtn) {
-      callBtn.addEventListener('click', closePopup);
-    }
-
-    // Close (×) button — fades in 1 second after the popup appears
-    setTimeout(function () {
-      closeBtn.classList.add('sp-close-visible');
-    }, 1000);
-
-    closeBtn.addEventListener('click', closePopup);
-  }, 2000);
-</script>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
